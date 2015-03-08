@@ -1,0 +1,103 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,200);
+
+h1{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  font-size:9rem;
+  text-align: center;
+  font-style: normal;
+
+  /*opacity:0;
+  animation:fadeIn 2s 2s ease forwards;*/
+
+}
+
+h2{
+    font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  font-size:5rem;
+    text-align: center;
+  font-style: normal;
+}
+
+.fade-in{
+  opacity:0;
+  animation:fadeIn 2s 2s ease forwards;
+}
+
+html { 
+  background: #111;
+  font-family: 'Raleway', sans-serif;
+
+
+}
+
+html,body{
+  height: 100%;
+}
+
+.cover-img{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+  background: url(../images/hybrids2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  opacity:0;
+  animation:fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+body{
+  color:white;
+  background: transparent;
+  padding-top:10rem;
+  //background: rgba(17, 17, 17, 0.48);
+  animation: toBlack 1s 2s ease forwards;
+
+}
+
+@keyframes toBlack{
+  0%{
+    background: rgba(17, 17, 17, 0.0);
+  }
+  100%{
+    background: rgba(17, 17, 17, 0.48);
+  }
+}
+
+input{
+  background: rgba(255, 255, 255, 0.19);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+  padding: 1rem;
+  font-size: 3rem;
+  width: 100%;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+
+}
+
+input[type="submit"]{
+  border:1px solid white;
+}

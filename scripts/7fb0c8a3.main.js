@@ -1,0 +1,1 @@
+var src=$(".cover-img").css("background-image"),url=src.match(/\((.*?)\)/)[1].replace(/('|")/g,""),img=new Image;img.onload=function(){$(".js-wait-for-image").toggleClass("js-wait-for-image animation")},img.src=url,img.complete&&img.onload();

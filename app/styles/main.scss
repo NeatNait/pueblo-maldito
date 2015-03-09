@@ -13,7 +13,7 @@ h1{
   font-style: normal;
 
   /*opacity:0;
-  animation:fadeIn 2s 2s ease forwards;*/
+  animation:fadeIn 1s 2s ease forwards;*/
 
 }
 
@@ -27,7 +27,7 @@ h2{
 
 .container.animation{
   opacity:0;
-  animation:fadeIn 2s 2s ease forwards;
+  animation:fadeIn 1s 2s ease forwards;
 }
 
 html { 
@@ -110,6 +110,70 @@ input[type="submit"]{
   border:1px solid #0BD269;
 }
 
+
+input.comprar-ahora {
+  color: #111;
+  background: rgba(255, 255, 255, 1);
+  padding: 15px 0px;
+  font-size: 3.2rem;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  border: 8px solid #0BD269;
+  border-radius: 15px;
+  box-shadow: #0BD269 0px 0px 50px 0px;
+  animation: glow 2s ease alternate infinite;
+}
+
+@keyframes glow{
+  0%{
+    box-shadow: #0BD269 0px 0px 50px 0px;
+  }
+  100%{
+    box-shadow: #0BD269 0px 0px 90px 0px;
+  }
+}
+
+
 .js-wait-for-image{
   opacity:0;
 }
+
+iframe{
+  width: 720px;
+  height: 586px;
+  display: inline;
+  border:0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.modal{
+  .modal-body{
+    text-align: center;
+  }
+}
+
+
+
+
+//@media (width lt $screen-xs-min) {
+  @media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+{
+  //width: $container-sm;
+  .modal{
+    .modal-body{
+      padding:0;
+    }
+  }
+  iframe{
+    transform: scale(0.41);
+    width: 720px;
+    height: 586px;
+    transform-origin: 0 0;
+  }
+}
+
+

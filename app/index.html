@@ -42,12 +42,19 @@
       <br>
       <br>
       <br>
-      <div class="row">
+
+
+      <!--div class="row">
         <div class="col-lg-6 col-lg-offset-1">
           <input type="text" placeholder="¿Cúal es tu correo?">
         </div>
         <div class="col-lg-4">
-          <input type="submit" value="SUSCRÍBETE">
+          <input type="submit" value="SUSCRÍBETE" data-toggle="modal" data-target="#comprar-entradas">
+        </div>
+      </div-->
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+          <input type="submit" class="comprar-ahora" value="COMPRA TU ENTRADA AHORA" data-toggle="modal" data-target="#comprar-entradas">
         </div>
       </div>
 
@@ -57,6 +64,24 @@
 
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="comprar-entradas" tabindex="-1" role="dialog" aria-labelledby="comprar-entradasLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="comprar-entradasLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <iframe 
+              src="http://entradium.com/entradas/3364.widget" 
+              scrolling="no" 
+              seamless="seamless">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->

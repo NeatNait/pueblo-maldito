@@ -5,6 +5,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,200);
 
+$bright : #0BD269;
+
 h1{
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
@@ -30,7 +32,7 @@ h2{
   animation:fadeIn 1s 2s ease forwards;
 }
 
-html { 
+html {
   background: #111;
   font-family: 'Raleway', sans-serif;
 
@@ -39,6 +41,7 @@ html {
 
 html,body{
   height: 100%;
+  //margin-top:100px;
 }
 
 .cover-img{
@@ -48,7 +51,7 @@ html,body{
   top:0;
   left:0;
   z-index:-1;
-  background: url(../images/hybrids2.jpg) no-repeat center center fixed; 
+  background: url(../images/hybrids2.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -116,7 +119,7 @@ input{
 }
 
 input[type="submit"]{
-  border:1px solid #0BD269;
+  border:1px solid $bright;
 }
 
 
@@ -128,18 +131,18 @@ input.comprar-ahora {
   width: 100%;
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
-  border: 8px solid #0BD269;
+  border: 8px solid $bright;
   border-radius: 15px;
-  box-shadow: #0BD269 0px 0px 50px 0px;
+  box-shadow: $bright 0px 0px 50px 0px;
   animation: glow 2s ease alternate infinite;
 }
 
 @keyframes glow{
   0%{
-    box-shadow: #0BD269 0px 0px 50px 0px;
+    box-shadow: $bright 0px 0px 50px 0px;
   }
   100%{
-    box-shadow: #0BD269 0px 0px 90px 0px;
+    box-shadow: $bright 0px 0px 90px 0px;
   }
 }
 
@@ -157,6 +160,12 @@ iframe{
   overflow: hidden;
 }
 
+
+body.modal-open {
+  //margin: 0 !important;
+  //overflow: visible;
+}
+
 .modal{
   .modal-body{
     text-align: center;
@@ -167,9 +176,9 @@ iframe{
 
 
 //@media (width lt $screen-xs-min) {
-  @media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) 
+  @media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px)
 {
   //width: $container-sm;
   .modal{
@@ -208,7 +217,7 @@ li {
 
 
 li:hover {
-  border-bottom: 1px solid #0BD269;
+  border-bottom: 1px solid $bright;
 }
 .modal.fade .modal-dialog{transform:none !important;}
 
@@ -232,10 +241,17 @@ li:hover {
     }
   }
 }
+
+.nav > li > a:hover, .nav > li > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+
 .navbar-shrink{
   background-color: #111;
-  //box-shadow: #0BD269 0px 0px 50px 0px, #0BD269 0px -30px 55px -35px inset;
-  //border-bottom: 1px #0BD269;
+  //box-shadow: $bright 0px 0px 50px 0px, $bright 0px -30px 55px -35px inset;
+  //border-bottom: 1px $bright;
   li {
     /* padding-top: 0; */
     margin-bottom: 2rem;
@@ -245,7 +261,7 @@ li:hover {
 
 .dark{
   background: #111; //#657681 //rgba(10, 199, 91, 0.52);
-    /*background: url(../images/hybrids2.jpg) no-repeat center center; 
+    /*background: url(../images/hybrids2.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -269,9 +285,9 @@ li:hover {
   p{
     padding:0 3.5rem;
     strong{
-      color: #0BD269;
+      color: $bright;
     }
-  }  
+  }
 }
 
 
@@ -292,4 +308,52 @@ li:hover {
 .nav-tabs > li > a {
   border-radius: 0;
   transition:all .5s ease;
+}
+
+.thumbnail {
+  display: block;
+  padding: 20px 0px 0px 0px;
+  margin-bottom: 20px;
+  line-height: 1.42857;
+  background-color: transparent;
+  border: 1px solid #dddddd;
+  border-radius: 0px;
+  transition: all 0.2s ease-in-out;
+  height:500px;
+  border-color:$bright;
+}
+
+.thumbnail .caption {
+  padding: 9px;
+  color: white;
+}
+
+.caption{
+  h3{
+    padding:1rem 2rem;
+  }
+}
+
+
+.btn-default {
+  color: #111;
+  background-color: white;
+  //border-color: #0EEA3A;
+  border-color: $bright;
+  border-width: 3px;
+  transition: all .25s ease;
+
+  &:hover {
+    // background: #0EEA3A;
+    // color: white;
+    // border-color: white;
+
+    //background: #3C3C3C;
+    color: #111;
+
+    border-color: $bright;
+    box-shadow: $bright 0px 0px 20px 0px;
+    //animation: glow 2s ease alternate infinite;
+
+  }
 }

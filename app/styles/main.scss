@@ -357,3 +357,16 @@ li:hover {
 
   }
 }
+
+
+li.rules-list {
+  text-transform: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+}
+
+
+.rules-list strong, li.rules-list i{
+    color: #0BD269;
+}
